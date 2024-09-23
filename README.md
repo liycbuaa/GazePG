@@ -27,18 +27,29 @@ datasets
 │   └───trainset
 │   └───testset
 │
-│──template
+│──template26
 │   │
 │   └───trainset
 │   └───testset
 └
 ```
 
-## Requirements
 
-## Train
+
+## Environments
+
+- Python: 3.8
+- PyTorch: 2.1.2
+- timm: 0.9.2
+
+
+
+## Training
 
 ```Bash
 
 ```
 
+
+
+## Acknowledgements
