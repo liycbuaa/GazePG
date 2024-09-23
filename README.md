@@ -46,10 +46,21 @@ datasets
 
 ## Training
 
-```Bash
+```
+python main.py --model dap --batch_size 100 --target gaze26_20_5 --mode dap
+```
 
+For other models: 
+
+```
+python main.py --model vit --batch_size 100 --target gaze26_20_5 --img_size 224 --mode mixture
 ```
 
 
 
 ## Acknowledgements
+
+We would like to thank the following repositories for their valuable contributions:
+
+[Mixup_for_UDA](https://github.com/ChrisAllenMing/Mixup_for_UDA), [ViT](https://github.com/huggingface/pytorch-image-models/tree/main), [ConViT](https://github.com/facebookresearch/convit), [MobileViT](https://github.com/apple/ml-cvnets/blob/main/cvnets/models/classification/mobilevit.py), [Swin](https://github.com/microsoft/Swin-Transformer), [ConvNeXt](https://github.com/facebookresearch/ConvNeXt), [Regnet](https://github.com/signatrix/regnet), [ResNeXt](https://github.com/facebookresearch/ResNeXt)
+
