@@ -1,9 +1,6 @@
-import torch
 import torch.nn as nn
 from torch.autograd import Function
-from torch.autograd import Variable
-import torchvision.models as models
-import math
+
 
 class ReverseLayerF(Function):
 
@@ -19,9 +16,10 @@ class ReverseLayerF(Function):
 
         return output, None
 
+
 class RevGrad(nn.Module):
 
-    def __init__(self, num_classes = 10):
+    def __init__(self, num_classes=10):
         super(RevGrad, self).__init__()
         self.nclasses = num_classes
 

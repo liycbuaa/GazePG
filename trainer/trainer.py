@@ -93,7 +93,7 @@ class Trainer():
         if args.mode == 'mixture':
             # mix source and target data
             train_loader = data_loader.load_training_mixture(args.img_size, args.dataset_root, args.source, args.target,
-                                                                args.batch_size)
+                                                             args.batch_size)
             test_loader = data_loader.load_testing(args.img_size, args.dataset_root, args.target, args.batch_size)
         elif args.mode == 'target_only':
             # train only with target data

@@ -15,12 +15,7 @@ def load_training(img_size, root_path, dir, batch_size):
          transforms.ToTensor(),
          transforms.Normalize(mean, std)])
     data = datasets.ImageFolder(root=os.path.join(root_path, dir, 'trainset'), transform=transform)
-    if dir == 'template26':
-        num_workers = 1
-    else:
-        num_workers = 0
-    train_loader = torch.utils.data.DataLoader(data, batch_size=batch_size, shuffle=True, drop_last=True,
-                                               num_workers=num_workers)
+    train_loader = torch.utils.data.DataLoader(data, batch_size=batch_size, shuffle=True, drop_last=True, num_workers=0)
     return train_loader
 
 
@@ -30,7 +25,7 @@ def load_testing(img_size, root_path, dir, batch_size):
          transforms.ToTensor(),
          transforms.Normalize(mean, std)])
     data = datasets.ImageFolder(root=os.path.join(root_path, dir, 'testset'), transform=transform)
-    test_loader = torch.utils.data.DataLoader(data, batch_size=batch_size, shuffle=False, num_workers=1)
+    test_loader = torch.utils.data.DataLoader(data, batch_size=batch_size, shuffle=False, num_workers=0)
 
     return test_loader
 
