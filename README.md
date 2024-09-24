@@ -53,7 +53,7 @@ python main.py --model dap --batch_size 100 --target gaze26_20_5 --mode dap
 For other models: 
 
 ```
-python main.py --model vit --batch_size 100 --target gaze26_20_5 --img_size 224 --mode mixture
+python main.py --model vit --batch_size 64 --target gaze26_20_5 --img_size 224 --mode mixture
 ```
 
 
