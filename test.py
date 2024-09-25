@@ -14,7 +14,7 @@ def testing(args, model_path):
     with torch.no_grad():
         correct = 0
         for idx, (data, label) in enumerate(target_test_loader):
-            if args.model == 'revgrad':
+            if args.model == 'dap':
                 _, pred, _ = model(data, alpha=0)
             else:
                 pred = model(data)
@@ -43,6 +43,6 @@ if __name__ == '__main__':
     parser.add_argument('--model', type=str, default='dap', help='Choose the model for training:')
     parser.add_argument('--num_classes', type=int, default=26, help='Number of classes')
     parser.add_argument('--img_size', type=int, default=28, help='Choose the model for training:')
-    model_path = 'tgtloss_best_modelgaze26_20_5.pkl'
+    model_path = 'models/dap/dap/gaze26_20_5/best_model_89.24.pkl'
     args = parser.parse_args()
     testing(args, model_path)
