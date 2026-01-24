@@ -39,9 +39,9 @@ datasets
 ## Environments
 
 - Python: 3.8
-- PyTorch: 2.1.2
+- PyTorch: 2.1.0
 - timm: 0.9.2
-
+- transformers: 4.51.3
 
 
 ## Training
